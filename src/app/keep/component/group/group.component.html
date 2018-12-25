@@ -1,0 +1,31 @@
+<mat-card appHoverEffect class="items">
+    <mat-card-title>
+      {{note.title}}
+    </mat-card-title>
+    <mat-card-content>
+      {{note.content}} <hr>
+      <strong>Created On:- {{note.createdOn | date: 'medium'}}</strong><br>
+      <strong>Laste Modified:- {{note.modifiedOn | date: 'medium'}}</strong><br>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="openEditNoteView(note.noteId)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-button *ngIf="note.favorite" (click)="toggleFavStatus(note.noteId)">
+        <mat-icon class="orange">favorite</mat-icon>
+      </button>
+      <button mat-button *ngIf="!note.favorite" (click)="toggleFavStatus(note.noteId)">
+        <mat-icon class="white">favorite</mat-icon>
+      </button>
+      <button mat-button (click)="removeNoteFromGroup(note.groupId, note.noteId, note.title)">
+          <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-button (click)="shareNote(note.noteId)">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  
+  
+  
+  

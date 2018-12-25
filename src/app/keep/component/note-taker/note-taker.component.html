@@ -1,0 +1,62 @@
+<!-- Note Taker Component -->
+
+<div class="keep-comp-note-taker-panel">
+    <mat-expansion-panel #panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Take a note</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="keep-comp-note-taker-wrapper">
+        <mat-form-field>
+          <input [(ngModel)]="note.title" matInput name="title" placeholder="Title" type="text">
+        </mat-form-field>
+        <mat-form-field>
+          <textarea [(ngModel)]="note.content" matInput name="content" placeholder="Content"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Select state" [(value)]="selected">
+            <mat-option *ngFor="let state of states" [value]="state.viewValue">
+              {{ state.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Remind Me" [matDatepicker]="picker" [(ngModel)]="remindMe">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Time</mat-label>
+          <mat-select placeholder="Choose time" [(value)]="time" (selectionChange)="selectChange($event.value)">
+            <mat-option value="8">8 AM</mat-option>
+            <mat-option value="10">10 AM</mat-option>
+            <mat-option value="12">12 PM</mat-option>
+            <mat-option value="14">2 PM</mat-option>
+            <mat-option value="16">4 PM</mat-option>
+            <mat-option value="18">6 PM</mat-option>
+            <mat-option value="20">8 PM</mat-option>
+            <mat-option value="0">Customize</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="optional" *ngIf="visible">
+           <mat-form-field>
+                  <input matInput placeholder="Hours" type="text" name="hours" [(ngModel)]="hrs">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Minutes" type="text" name="minutes" [(ngModel)]="mins">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-select [(value)]="amPm" >
+                <mat-option value="AM">AM</mat-option>
+                <mat-option value="PM">PM</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+
+      </div>
+      <div class="keep-comp-button">
+        <button mat-button (click)="addNote()">Done</button>
+      </div>
+      <label class="error-message">{{errorMessage}}</label>
+    </mat-expansion-panel>      
+  </div>
+  

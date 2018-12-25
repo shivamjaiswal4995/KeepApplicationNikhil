@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <button class="sidenav-toggle" (click)="sidenavToggle.emit()" mat-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>
+    <button mat-button (click)="showAllNotes()" matTooltip="Home page"><mat-icon>home</mat-icon></button>Keep
+  </span>
+  
+  <span class="example-spacer"></span>
+  <button mat-button matTooltip="Notifications" [matMenuTriggerFor]="notifications" (click)="toggleReadFlags()">
+   <span *ngIf="totalNotification !== 0"><mat-icon class="red">notification_important</mat-icon></span> 
+   <span *ngIf="totalNotification === 0"><mat-icon>notification_important</mat-icon></span> 
+  </button>
+  <mat-menu #notifications="matMenu">
+    <mat-list dense *ngIf="_notification.length > 0">
+      <h3 mat-subheader>{{_notification.length}} Recent Activities</h3>
+      <mat-list-item *ngFor="let item of _notification" class="list">
+        <p class="list-item">{{item.content}}</p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+    <mat-list dense *ngIf="!(_notification.length > 0)">
+      <mat-list-item>
+        No new notifications
+      </mat-list-item>
+    </mat-list>
+  </mat-menu>
+
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    {{_userName}}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logOut()">Log out</button>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,15 @@
+<form class="filter-form">
+  <mat-form-field class="filter-form-full-width">
+    <input matInput placeholder="Filter By" name="content" [(ngModel)]="listFilter">
+  </mat-form-field>
+</form>
+
+<section class="filteredBy">
+  <strong>Filtered By: </strong> {{listFilter}}
+</section>
+
+<section class="keep-c-note-container">
+  <div *ngFor="let note of notes | noteFilter:listFilter">
+      <app-note [note]="note" ></app-note>
+  </div>
+</section>

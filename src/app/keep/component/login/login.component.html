@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+  Keep
+</mat-toolbar>
+
+<mat-tab-group dynamicHeight class="login-tab">
+  <mat-tab label="Sign In">
+    <section class="keep-login-form">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title><strong>Sign In</strong></mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <section class="keep-comp-note-taker-wrapper">
+            <mat-form-field>
+              <input matInput [(ngModel)]="user.userEmail" [formControl]="userEmailError" placeholder="Email Id" required>
+              <mat-error *ngIf="userEmailError.invalid">{{getErrorMessageForUserEmail()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput type="password" [(ngModel)]="user.password" [formControl] = "passwordError" placeholder="Password" required>
+              <mat-error *ngIf="passwordError.invalid">{{getErrorMessageForPassword()}}</mat-error>
+            </mat-form-field>
+          </section>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="signIn()">Submit</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </mat-tab>
+
+  <mat-tab label="Sign Up">
+    <section class="keep-login-form">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title><strong>Sign Up</strong></mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <section class="keep-comp-note-taker-wrapper">
+            <mat-form-field>
+              <input matInput [(ngModel)]="user.userName" [formControl]="userNameError" placeholder="Name" required>
+              <mat-error *ngIf="userNameError.invalid">{{getErrorMessageForUsername()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [(ngModel)]="user.userEmail" [formControl]="userEmailError" placeholder="Email Id" required>
+              <mat-error *ngIf="userEmailError.invalid">{{getErrorMessageForUserEmail()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput type="password" [(ngModel)]="user.password" [formControl] = "passwordError" placeholder="Password" required>
+              <mat-error *ngIf="passwordError.invalid">{{getErrorMessageForPassword()}}</mat-error>
+            </mat-form-field>
+          </section>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="signUp()">Submit</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </mat-tab>
+</mat-tab-group>

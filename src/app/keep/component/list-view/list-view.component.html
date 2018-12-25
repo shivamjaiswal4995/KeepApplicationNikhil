@@ -1,0 +1,41 @@
+<!--<mat-grid-list cols="3">
+  <mat-grid-tile>Not-Started
+    <section class="note-flex-item" *ngFor="let note of notes">
+      <app-note [note]="note" *ngIf="note.state==='not-started'"></app-note>
+    </section>
+  </mat-grid-tile>
+  <mat-grid-tile>Started
+    <section class="note-flex-item" *ngFor="let note of notes">
+      <app-note [note]="note" *ngIf="note.state==='started'"></app-note>
+    </section>
+  </mat-grid-tile>
+  <mat-grid-tile>Completed
+    <section class="note-flex-item" *ngFor="let note of notes">
+      <app-note [note]="note" *ngIf="note.state==='completed'"></app-note>
+    </section>
+  </mat-grid-tile>
+</mat-grid-list>-->
+<!--<section class="note-flex-item">
+  <app-note [note]="note" *ngFor="let note of notes"></app-note>
+</section>-->
+
+<div fxLayout="row" fxLayoutAlign="space-between start" class="keep-c-list-container" fxLayout.xs="column">
+  <div class="flex-item">
+    Not-started
+    <section *ngFor="let note of notes">
+        <app-note [note]="note" *ngIf="note.state==='not-started'"></app-note>
+    </section>
+  </div>
+  <div class="flex-item">
+    Started
+    <section *ngFor="let note of notes">
+        <app-note [note]="note" *ngIf="note.state==='started'"></app-note>
+    </section>    
+  </div>
+  <div class="flex-item">
+    Completed
+    <section *ngFor="let note of notes">
+        <app-note [note]="note" *ngIf="note.state==='completed'"></app-note>
+    </section>    
+  </div>
+</div>

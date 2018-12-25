@@ -1,0 +1,19 @@
+
+<mat-dialog-content>
+    <div class="example-container">
+        <mat-select placeholder="Share with" [(value)]="selected">
+            <mat-option *ngFor="let user of usersList" [value]="user.viewValue">
+                {{user.viewValue}}
+            </mat-option>
+        </mat-select>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button color="primary" (click)="done()">
+        <mat-icon>save</mat-icon>Share
+    </button>
+    <button mat-button color="primary" (click)="dismiss()">
+        <mat-icon>cancel</mat-icon>Cancel
+    </button>
+</mat-dialog-actions>

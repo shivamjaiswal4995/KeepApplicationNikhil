@@ -1,0 +1,23 @@
+.filter-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.filter-form-full-width {
+    width: 100%;
+}
+
+.filteredBy {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.keep-c-note-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+}

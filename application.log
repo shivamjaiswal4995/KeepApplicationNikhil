@@ -1,0 +1,371 @@
+[2018-08-30T19:49:21.162] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-08-30T20:13:25.086] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-08-30T20:25:17.379] [ERROR] default - Error occurred while sharing notes with different user:  { ValidationError: notes validation failed: remindMe: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at ValidationError.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/validation.js:56:24)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:161:12)
+    at Object.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:223:18)
+    at formatLogData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:118:7)
+    at app (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/appenders/file.js:55:18)
+    at appenders.forEach (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:127:14)
+  errors: 
+   { remindMe: 
+      { CastError: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at new CastError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/cast.js:29:11)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:875:7)
+    at model._handleIndex (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:684:14)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:641:22)
+    at model.Document (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:112:12)
+    at model.Model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:65:12)
+    at new model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:4284:13)
+    at addNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:23:19)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:235:5)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.service.js:32:14)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.controller.js:32:17)
+    at router.post (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.router.js:170:21)
+    at Layer.handle [as handle_request] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/route.js:137:13)
+    at verifyToken (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/auth/authController.js:21:17)
+    at jwt.verify (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/JWT/jwtController.js:27:20)
+        message: 'Cast to Date failed for value "Invalid Date" at path "remindMe"',
+        name: 'CastError',
+        stringValue: '"Invalid Date"',
+        kind: 'Date',
+        value: Invalid Date,
+        path: 'remindMe',
+        reason: [Object] } },
+  _message: 'notes validation failed',
+  name: 'ValidationError' }
+[2018-08-30T20:26:58.410] [ERROR] default - Error occurred while sharing notes with different user:  { ValidationError: notes validation failed: remindMe: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at ValidationError.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/validation.js:56:24)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:161:12)
+    at Object.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:223:18)
+    at formatLogData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:118:7)
+    at app (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/appenders/file.js:55:18)
+    at appenders.forEach (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:127:14)
+  errors: 
+   { remindMe: 
+      { CastError: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at new CastError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/cast.js:29:11)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:875:7)
+    at model._handleIndex (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:684:14)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:641:22)
+    at model.Document (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:112:12)
+    at model.Model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:65:12)
+    at new model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:4284:13)
+    at addNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:23:19)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:235:5)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.service.js:32:14)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.controller.js:32:17)
+    at router.post (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.router.js:170:21)
+    at Layer.handle [as handle_request] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/route.js:137:13)
+    at verifyToken (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/auth/authController.js:21:17)
+    at jwt.verify (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/JWT/jwtController.js:27:20)
+        message: 'Cast to Date failed for value "Invalid Date" at path "remindMe"',
+        name: 'CastError',
+        stringValue: '"Invalid Date"',
+        kind: 'Date',
+        value: Invalid Date,
+        path: 'remindMe',
+        reason: [Object] } },
+  _message: 'notes validation failed',
+  name: 'ValidationError' }
+[2018-08-30T20:34:14.660] [ERROR] default - Error occurred while sharing notes with different user:  { ValidationError: notes validation failed: remindMe: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at ValidationError.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/validation.js:56:24)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:161:12)
+    at Object.inspect (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at Object.format (util.js:223:18)
+    at formatLogData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/layouts.js:118:7)
+    at app (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/appenders/file.js:55:18)
+    at appenders.forEach (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/log4js/lib/logger.js:127:14)
+  errors: 
+   { remindMe: 
+      { CastError: Cast to Date failed for value "Invalid Date" at path "remindMe"
+    at new CastError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/error/cast.js:29:11)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:875:7)
+    at model._handleIndex (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:684:14)
+    at model.$set (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:641:22)
+    at model.Document (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/document.js:112:12)
+    at model.Model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:65:12)
+    at new model (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongoose/lib/model.js:4284:13)
+    at addNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:23:19)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.dao.js:235:5)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.service.js:32:14)
+    at Object.shareNote (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.controller.js:32:17)
+    at router.post (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/notes/notes.router.js:170:21)
+    at Layer.handle [as handle_request] (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/express/lib/router/route.js:137:13)
+    at verifyToken (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/auth/authController.js:21:17)
+    at jwt.verify (/Users/591818/Desktop/Keep-Application-Final-Assignment/server/api/v1/JWT/jwtController.js:27:20)
+        message: 'Cast to Date failed for value "Invalid Date" at path "remindMe"',
+        name: 'CastError',
+        stringValue: '"Invalid Date"',
+        kind: 'Date',
+        value: Invalid Date,
+        path: 'remindMe',
+        reason: [Object] } },
+  _message: 'notes validation failed',
+  name: 'ValidationError' }
+[2018-08-30T20:39:04.938] [ERROR] default - Error occurred while sending notification mail:  { Error: connect ECONNREFUSED 74.125.68.108:465
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+  code: 'ECONNECTION',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '74.125.68.108',
+  port: 465,
+  command: 'CONN' }
+[2018-08-31T16:03:47.084] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-08-31T16:05:18.516] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }
+    at Function.MongoError.create (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-08-31T16:14:57.430] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }
+    at Function.MongoError.create (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-01T21:25:31.522] [ERROR] default - Error occurred while sending notification mail:  { Error: Invalid login: 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtA
+534-5.7.14 w_YpCkeh9v4Ax08u9WcuNeXsATYHVa4f6BelIuSBCVQoYxzYeoxTFCA4w1H_GglWpFsKIa
+534-5.7.14 Imcd3FkLXqPW0SUqboGpmK4QNhA2Rr0GSEgXZQ7Ekp41XSVPW2ZLQYwOYAyPg9aKIHAkAV
+534-5.7.14 f0DIRqUonXgjdDreRFruxhCrqzwmwcJDAjTGv2fL1pAiBfRgDRHy9p9V8KYTkpnU0Y8dsd
+534-5.7.14 IMzJ58CqUiG6UMxkcaL9dDRlV6T04TTx2OkHg7MS1ydmldKhgP> Please log in via
+534-5.7.14 your web browser and then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 u83-v6sm56317971pfj.37 - gsmtp
+    at SMTPConnection._formatError (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._actionAUTHComplete (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1335:34)
+    at SMTPConnection._responseActions.push.str (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/home/ubuntu/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:594:20)
+  code: 'EAUTH',
+  response: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtA\n534-5.7.14 w_YpCkeh9v4Ax08u9WcuNeXsATYHVa4f6BelIuSBCVQoYxzYeoxTFCA4w1H_GglWpFsKIa\n534-5.7.14 Imcd3FkLXqPW0SUqboGpmK4QNhA2Rr0GSEgXZQ7Ekp41XSVPW2ZLQYwOYAyPg9aKIHAkAV\n534-5.7.14 f0DIRqUonXgjdDreRFruxhCrqzwmwcJDAjTGv2fL1pAiBfRgDRHy9p9V8KYTkpnU0Y8dsd\n534-5.7.14 IMzJ58CqUiG6UMxkcaL9dDRlV6T04TTx2OkHg7MS1ydmldKhgP> Please log in via\n534-5.7.14 your web browser and then try again.\n534-5.7.14  Learn more at\n534 5.7.14  https://support.google.com/mail/answer/78754 u83-v6sm56317971pfj.37 - gsmtp',
+  responseCode: 534,
+  command: 'AUTH PLAIN' }
+[2018-09-03T14:03:21.304] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'Incorrect password' }
+[2018-09-03T14:36:59.400] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-03T14:37:08.695] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-03T20:08:07.050] [ERROR] default - Error occurred while verifying the token:  jwt must be provided
+[2018-09-04T15:22:52.234] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "roopamicky63@gmail.com" }
+    at Function.MongoError.create (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "roopamicky63@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "roopamicky63@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-04T15:37:12.505] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-04T15:50:10.490] [ERROR] default - Error occurred while verifying the token:  jwt malformed
+[2018-09-04T16:01:00.456] [ERROR] default - Error occurred while verifying the token:  jwt expired
+[2018-09-04T16:03:46.291] [ERROR] default - Error occurred while verifying the token:  Unexpected token  in JSON at position 3
+[2018-09-04T19:57:24.770] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-05T11:50:47.310] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-07T17:20:08.829] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }
+    at Function.MongoError.create (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-07T17:22:28.866] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }
+    at Function.MongoError.create (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "nikhilojha93@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-07T18:14:01.242] [ERROR] default - Error occurred while signing up a new user:  { MongoError: E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "bbala00@gmail.com" }
+    at Function.MongoError.create (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "bbala00@gmail.com" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.users index: userEmail_1 dup key: { : "bbala00@gmail.com" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-07T18:42:07.542] [ERROR] default - Error occurred while verifying the token:  jwt malformed
+[2018-09-10T16:36:52.767] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-09-10T16:58:39.944] [ERROR] default - Error occurred while sending reminder mail:  { Error: No recipients defined
+    at SMTPConnection._formatError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:597:20) code: 'EENVELOPE', command: 'API' }
+[2018-09-10T16:59:39.840] [ERROR] default - Error occurred while sending reminder mail:  { Error: No recipients defined
+    at SMTPConnection._formatError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:597:20) code: 'EENVELOPE', command: 'API' }
+[2018-09-10T17:00:39.870] [ERROR] default - Error occurred while sending reminder mail:  { Error: No recipients defined
+    at SMTPConnection._formatError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:597:20) code: 'EENVELOPE', command: 'API' }
+[2018-09-10T17:01:39.807] [ERROR] default - Error occurred while sending reminder mail:  { Error: No recipients defined
+    at SMTPConnection._formatError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:597:20) code: 'EENVELOPE', command: 'API' }
+[2018-09-10T17:02:39.862] [ERROR] default - Error occurred while sending reminder mail:  { Error: No recipients defined
+    at SMTPConnection._formatError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:597:20) code: 'EENVELOPE', command: 'API' }
+[2018-09-10T17:31:31.270] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'Incorrect password' }
+[2018-09-12T14:57:15.852] [ERROR] default - Error occurred while creating a new group:  { MongoError: E11000 duplicate key error collection: keepApp.groups index: title_1 dup key: { : "dummy" }
+    at Function.MongoError.create (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/error.js:49:10)
+    at toError (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/utils.js:149:22)
+    at coll.s.topology.insert (/Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb/lib/operations/collection_ops.js:803:39)
+    at /Users/591818/Desktop/Keep-Application-Final-Assignment/node_modules/mongodb-core/lib/connection/pool.js:531:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: keepApp.groups index: title_1 dup key: { : "dummy" }',
+  driver: true,
+  index: 0,
+  code: 11000,
+  errmsg: 'E11000 duplicate key error collection: keepApp.groups index: title_1 dup key: { : "dummy" }',
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-12T15:02:06.096] [ERROR] default - Error occurred while verifying the token:  jwt malformed
+[2018-10-14T21:42:23.933] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }
+[2018-10-14T21:42:37.031] [ERROR] default - Error occurred while signing in a particular user:  { auth: false, token: null, message: 'No user found' }

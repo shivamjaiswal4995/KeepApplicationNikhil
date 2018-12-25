@@ -1,0 +1,25 @@
+<div *ngIf="!group">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="group">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{group.title}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{group.description}} <hr>
+        <strong>Created On:- {{group.createdOn | date: 'medium'}}</strong> <br>
+        <strong>Last Modified:- {{group.modifiedOn | date: 'medium'}}</strong> <br>
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <section class="keep-c-note-container">
+      <section *ngFor="let note of group.notes">
+          <app-group [note]="note" ></app-group>
+      </section>
+  </section>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="keep-c-note-editor-form">
+  <mat-form-field>
+    <input [(ngModel)]="note.title" matInput name="title" placeholder="Title" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea [(ngModel)]="note.content" matInput name="content" placeholder="Content"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select state" [(value)]="selected">
+      <mat-option *ngFor="let state of states" [value]="state.viewValue">
+        {{ state.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="keep-c-save-btn-wrapper">
+  <button mat-button (click)="editNote()">Save</button>
+</div>
